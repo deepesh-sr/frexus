@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='absolute h-screen w-full overflow-hidden z-20'>
+    <div className='relative h-screen w-full overflow-hidden'>
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full bg-linear-to-b bg-[#003751] z-10 opacity-80"></div>
       <video
