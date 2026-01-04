@@ -3,13 +3,13 @@ import React from 'react'
 const Section2 = () => {
     return (
         <div>
-            <div className='h-screen w-full bg-white flex justify-between items-center p-10'>
+            <div className='h-screen w-full bg-white flex justify-center items-center p-10'>
                 <div className='flex justify-start items-start'>
 
                     <div>
                         <img src="https://frexuswp.websitelayout.net/wp-content/uploads/2025/09/about-03.jpg" alt="" className='rounded-lg' />
                     </div>
-                    <div className='flex flex-col justify-between items-start p-10 gap-6'>
+                    <div className='flex flex-col justify-between items-start p-10 gap-6 max-w-1/2cr'>
                         <div>
                             <button className='bg-orange-500 text-white px-6 py-2 rounded-full font-medium hover:bg-orange-600 transition'>
                                 ABOUT
