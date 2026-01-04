@@ -12,48 +12,48 @@ const Footer = () => {
   return (
     <footer className='w-full bg-[#1e3a4a]'>
       {/* Top Section */}
-      <div className='max-w-7xl mx-auto px-8 py-16'>
-        <div className='grid grid-cols-3 gap-16'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-14 lg:py-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16'>
           {/* About Frexus */}
           <div>
-            <h3 className='text-white text-3xl font-bold mb-6'>About Frexus</h3>
-            <p className='text-gray-300 text-lg leading-relaxed mb-8'>
+            <h3 className='text-white text-2xl sm:text-3xl font-bold mb-4 sm:mb-6'>About Frexus</h3>
+            <p className='text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8'>
               We have been the most trusted transport partner for 25+ years.
             </p>
             
             {/* Social Media Icons */}
-            <div className='flex gap-4'>
+            <div className='flex gap-3 sm:gap-4'>
               <a 
                 href='#' 
-                className='w-14 h-14 rounded-full bg-white hover:bg-orange-500 flex items-center justify-center text-[#1e3a4a] hover:text-white transition-all duration-300'
+                className='w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white hover:bg-orange-500 flex items-center justify-center text-[#1e3a4a] hover:text-white transition-all duration-300'
               >
-                <FaFacebookF className='text-xl' />
+                <FaFacebookF className='text-base sm:text-xl' />
               </a>
               <a 
                 href='#' 
-                className='w-14 h-14 rounded-full bg-white hover:bg-orange-500 flex items-center justify-center text-[#1e3a4a] hover:text-white transition-all duration-300'
+                className='w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white hover:bg-orange-500 flex items-center justify-center text-[#1e3a4a] hover:text-white transition-all duration-300'
               >
-                <FaTwitter className='text-xl' />
+                <FaTwitter className='text-base sm:text-xl' />
               </a>
               <a 
                 href='#' 
-                className='w-14 h-14 rounded-full bg-white hover:bg-orange-500 flex items-center justify-center text-[#1e3a4a] hover:text-white transition-all duration-300'
+                className='w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white hover:bg-orange-500 flex items-center justify-center text-[#1e3a4a] hover:text-white transition-all duration-300'
               >
-                <FaLinkedinIn className='text-xl' />
+                <FaLinkedinIn className='text-base sm:text-xl' />
               </a>
               <a 
                 href='#' 
-                className='w-14 h-14 rounded-full bg-white hover:bg-orange-500 flex items-center justify-center text-[#1e3a4a] hover:text-white transition-all duration-300'
+                className='w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white hover:bg-orange-500 flex items-center justify-center text-[#1e3a4a] hover:text-white transition-all duration-300'
               >
-                <FaInstagram className='text-xl' />
+                <FaInstagram className='text-base sm:text-xl' />
               </a>
             </div>
           </div>
 
           {/* Contact Us */}
           <div>
-            <h3 className='text-white text-3xl font-bold mb-6'>Contact Us</h3>
-            <div className='space-y-4 text-gray-300 text-lg'>
+            <h3 className='text-white text-2xl sm:text-3xl font-bold mb-4 sm:mb-6'>Contact Us</h3>
+            <div className='space-y-3 sm:space-y-4 text-gray-300 text-base sm:text-lg'>
               <div>
                 <span className='font-semibold text-white'>ADDRESS:</span>
                 <span className='ml-2'>66 Guild Street 512B, Great North Town.</span>
@@ -75,8 +75,8 @@ const Footer = () => {
 
           {/* Our Newsletter */}
           <div>
-            <h3 className='text-white text-3xl font-bold mb-6'>Our Newsletter</h3>
-            <form onSubmit={handleSubscribe} className='space-y-4'>
+            <h3 className='text-white text-2xl sm:text-3xl font-bold mb-4 sm:mb-6'>Our Newsletter</h3>
+            <form onSubmit={handleSubscribe} className='space-y-3 sm:space-y-4'>
               {/* Email Input */}
               <div className='relative'>
                 <input
@@ -84,18 +84,18 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder='Subscribe with us'
-                  className='w-full px-6 py-4 rounded-full bg-white text-gray-700 placeholder:text-gray-400 focus:outline-none pr-14'
+                  className='w-full px-5 sm:px-6 py-3 sm:py-4 rounded-full bg-white text-gray-700 placeholder:text-gray-400 focus:outline-none pr-12 sm:pr-14 text-sm sm:text-base'
                   required
                 />
                 <div className='absolute right-4 top-1/2 -translate-y-1/2'>
-                  <FaUser className='text-gray-400 text-xl' />
+                  <FaUser className='text-gray-400 text-lg sm:text-xl' />
                 </div>
               </div>
 
               {/* Subscribe Button */}
               <button
                 type='submit'
-                className='w-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg py-4 rounded-full transition-colors duration-300 uppercase tracking-wide'
+                className='w-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-base sm:text-lg py-3 sm:py-4 rounded-full transition-colors duration-300 uppercase tracking-wide'
               >
                 SUBSCRIBE NOW
               </button>
@@ -108,33 +108,33 @@ const Footer = () => {
       <div className='border-t border-gray-600'></div>
 
       {/* Bottom Section */}
-      <div className='max-w-7xl mx-auto px-8 py-8'>
-        <div className='flex items-center justify-between'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-8'>
+        <div className='flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0'>
           {/* Logo */}
-          <div className='flex items-center gap-4'>
+          <div className='flex items-center gap-3 sm:gap-4'>
             <div className='flex items-center gap-3'>
               {/* Logo Icon */}
               <div className='relative'>
-                <div className='w-16 h-16 bg-orange-500 rounded-tl-2xl rounded-br-2xl transform rotate-45'></div>
-                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-tl-xl rounded-br-xl transform rotate-45'></div>
+                <div className='w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-orange-500 rounded-tl-xl sm:rounded-tl-2xl rounded-br-xl sm:rounded-br-2xl transform rotate-45'></div>
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white rounded-tl-lg sm:rounded-tl-xl rounded-br-lg sm:rounded-br-xl transform rotate-45'></div>
               </div>
               {/* Logo Text */}
               <div>
-                <div className='text-white text-3xl font-bold uppercase tracking-tight'>FREXUS</div>
-                <div className='text-white text-sm font-semibold tracking-wider'>FAST & RELIABLE</div>
+                <div className='text-white text-2xl sm:text-3xl font-bold uppercase tracking-tight'>FREXUS</div>
+                <div className='text-white text-xs sm:text-sm font-semibold tracking-wider'>FAST & RELIABLE</div>
               </div>
             </div>
           </div>
 
           {/* Navigation Links */}
-          <div className='flex items-center gap-12'>
-            <a href='#about' className='text-white text-lg font-medium hover:text-orange-500 transition-colors duration-300'>
+          <div className='flex flex-wrap items-center justify-center gap-6 sm:gap-8 lg:gap-12'>
+            <a href='#about' className='text-white text-base sm:text-lg font-medium hover:text-orange-500 transition-colors duration-300'>
               About Us
             </a>
-            <a href='#services' className='text-white text-lg font-medium hover:text-orange-500 transition-colors duration-300'>
+            <a href='#services' className='text-white text-base sm:text-lg font-medium hover:text-orange-500 transition-colors duration-300'>
               Services
             </a>
-            <a href='#contact' className='text-white text-lg font-medium hover:text-orange-500 transition-colors duration-300'>
+            <a href='#contact' className='text-white text-base sm:text-lg font-medium hover:text-orange-500 transition-colors duration-300'>
               Get In Touch
             </a>
           </div>

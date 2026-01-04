@@ -77,7 +77,7 @@ const Section3 = () => {
             OUR SERVICES
           </button>
           <h2 className='text-6xl font-bold text-[#003751] mb-4'>
-            Comprehensive Logistics Solutions
+ Logistics Solutions
           </h2>
           <p className='text-gray-600 text-xl max-w-2xl mx-auto'>
             Discover our range of transport and logistics services designed to meet your business needs
@@ -88,7 +88,7 @@ const Section3 = () => {
         <div className='relative w-full'>
           <div className='flex items-center justify-center gap-6 overflow-hidden'>
             {/* Left Card (Half Visible) */}
-            <div className='w-1/4 opacity-60 transition-all duration-500'>
+            <div className='hidden md:block w-1/4 opacity-60 transition-all duration-500'>
               <ServiceCard
                 {...services[visibleIndexes[0]]}
                 isCenter={false}
@@ -96,7 +96,7 @@ const Section3 = () => {
             </div>
 
             {/* Center Card (Full Visible) */}
-            <div className='w-1/2 transition-all duration-500 z-10'>
+            <div className='w-full md:w-1/2 transition-all duration-500 z-10'>
               <ServiceCard
                 {...services[visibleIndexes[1]]}
                 isCenter={true}
@@ -104,7 +104,7 @@ const Section3 = () => {
             </div>
 
             {/* Right Card (Half Visible) */}
-            <div className='w-1/4 opacity-60 transition-all duration-500'>
+            <div className='hidden md:block w-1/4 opacity-60 transition-all duration-500'>
               <ServiceCard
                 {...services[visibleIndexes[2]]}
                 isCenter={false}
@@ -115,27 +115,43 @@ const Section3 = () => {
           {/* Navigation Buttons */}
           <button
             onClick={handlePrev}
-            className='absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-orange-500 text-[#003751] hover:text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-20'
+            className='hidden md:flex absolute left-2 sm:left-4 lg:left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-orange-500 text-[#003751] hover:text-white w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full shadow-lg items-center justify-center transition-all duration-300 z-20'
           >
-            <FaChevronLeft className='text-2xl' />
+            <FaChevronLeft className='text-lg sm:text-xl lg:text-2xl' />
           </button>
 
           <button
             onClick={handleNext}
-            className='absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-orange-500 text-[#003751] hover:text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-20'
+            className='hidden md:flex absolute right-2 sm:right-4 lg:right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-orange-500 text-[#003751] hover:text-white w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full shadow-lg items-center justify-center transition-all duration-300 z-20'
           >
-            <FaChevronRight className='text-2xl' />
+            <FaChevronRight className='text-lg sm:text-xl lg:text-2xl' />
+          </button>
+        </div>
+
+        {/* Mobile Navigation Buttons */}
+        <div className='flex md:hidden justify-center gap-6 mt-6'>
+          <button
+            onClick={handlePrev}
+            className='bg-white hover:bg-orange-500 text-[#003751] hover:text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300'
+          >
+            <FaChevronLeft className='text-lg' />
+          </button>
+          <button
+            onClick={handleNext}
+            className='bg-white hover:bg-orange-500 text-[#003751] hover:text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300'
+          >
+            <FaChevronRight className='text-lg' />
           </button>
         </div>
 
         {/* Dots Indicator */}
-        <div className='flex justify-center gap-3 mt-10'>
+        <div className='flex justify-center gap-2 sm:gap-3 mt-6 sm:mt-10 lg:mt-12'>
           {services.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-orange-500 w-8' : 'bg-gray-300'
+              className={`h-2.5 sm:h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'bg-orange-500 w-6 sm:w-8' : 'bg-gray-300 w-2.5 sm:w-3'
               }`}
             />
           ))}
