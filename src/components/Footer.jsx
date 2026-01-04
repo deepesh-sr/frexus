@@ -115,13 +115,13 @@ const Footer = () => {
             <div className='flex items-center gap-3'>
               {/* Logo Icon */}
               <div className='relative'>
-                <div className='w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-orange-500 rounded-tl-xl sm:rounded-tl-2xl rounded-br-xl sm:rounded-br-2xl transform rotate-45'></div>
-                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white rounded-tl-lg sm:rounded-tl-xl rounded-br-lg sm:rounded-br-xl transform rotate-45'></div>
-              </div>
-              {/* Logo Text */}
-              <div>
-                <div className='text-white text-2xl sm:text-3xl font-bold uppercase tracking-tight'>FREXUS</div>
-                <div className='text-white text-xs sm:text-sm font-semibold tracking-wider'>FAST & RELIABLE</div>
+                <div className='flex-shrink-0'>
+                    <img
+                        src="https://frexuswp.websitelayout.net/wp-content/uploads/2025/11/logo-inner.png"
+                        className='h-10 sm:h-12 lg:h-14 w-auto'
+                        alt="Frexus Logo" 
+                    />
+                </div>
               </div>
             </div>
           </div>
